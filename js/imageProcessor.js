@@ -1,6 +1,6 @@
 class ImageProcessor {
     constructor() {
-        this.MAX_SIZE = 2048;
+        this.MAX_SIZE = 4096;
         this.processedImage = null;
     }
 
