@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#2196f3" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>图片转Excel像素画</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx-js-style/dist/xlsx.bundle.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>图片转Excel像素画</h1>
+            <p class="subtitle">轻松将您的图片转换为Excel像素艺术</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="drop-zone" id="dropZone">
+                    <input type="file" id="imageInput" accept="image/*" class="file-input" />
+                    <div class="upload-content">
+                        <svg class="upload-icon" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17 8 12 3 7 8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                        <p>点击或拖放图片到此处</p>
+                        <span class="upload-hint">支持JPG、PNG等常见图片格式</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <div class="control-group">
+                    <label for="scaleSlider">缩放比例：</label>
+                    <div class="slider-container">
+                        <input type="range" id="scaleSlider" min="1" max="100" value="30" />
+                        <span id="scaleValue">30%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-section">
+                <h2>预览</h2>
+                <div id="preview" class="preview-container"></div>
+            </div>
+
+            <div class="action-section">
+                <button id="generateBtn" class="primary-button" onclick="generateExcel()">
+                    生成Excel文件
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <div id="loading" class="loading-overlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <h3>正在生成Excel文件</h3>
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+            <p id="progressText">处理中 0%</p>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/imageProcessor.js"></script>
+    <script src="js/colorUtils.js"></script>
+    <script src="js/excelGenerator.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
