@@ -58,4 +58,4 @@
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This project uses the `xlsx-js-style` library via CDN, which is licensed under the Apache License 2.0. The original license is included in the [LICENSE-APACHE](LICENSE-APACHE) file.
+This project uses the `xlsx-js-style` library via CDN, which is licensed under the Apache License 2.0.
