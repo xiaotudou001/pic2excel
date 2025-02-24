@@ -383,3 +383,10 @@ input[type="range"]::-moz-range-thumb {
         padding-bottom: max(var(--spacing-unit), env(safe-area-inset-bottom));
     }
 }
+.footer {
+    text-align: center;
+    margin-top: calc(var(--spacing-unit) * 2);
+    padding: calc(var(--spacing-unit) * 2) 0;
+    color: #666;
+    font-size: 0.9rem;
+}
